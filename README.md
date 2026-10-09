@@ -8,7 +8,7 @@ It shall NOT be edited by hand.
   J'auto expose, packaged for YunoHost
 </h1>
 
-A tool for opening your Yunohost to the Internet, using a remote cloud machine as a passage
+Tool for opening your YunoHost to the Internet, using a remote cloud machine as a passage
 
 [![Version: 1.0~ynh1](https://img.shields.io/badge/Version-1.0~ynh1-rgb(18,138,11)?style=for-the-badge)](https://ci-apps.yunohost.org/ci/apps/jauto-expose/)
 
