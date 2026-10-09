@@ -4,39 +4,34 @@ It shall NOT be edited by hand.
 -->
 
 <h1>
-  <img src="https://raw.githubusercontent.com/YunoHost/apps/main/logos/nidimages.png" width="32px" alt="Logo of Nidimages">
-  Nidimages, packaged for YunoHost
+  <img src="https://raw.githubusercontent.com/YunoHost/apps/main/logos/jauto-expose.png" width="32px" alt="Logo of J'auto expose">
+  J'auto expose, packaged for YunoHost
 </h1>
 
-Photo sharing web app to keep your family and friends connected with your adventures and memories
+A tool for opening your Yunohost to the Internet, using a remote cloud machine as a passage
 
-[![App Demo](https://img.shields.io/badge/App_Demo-blue?style=for-the-badge)](https://demo.nidimages.sitegui.dev/)
-[![Version: 1.5~ynh1](https://img.shields.io/badge/Version-1.5~ynh1-rgb(18,138,11)?style=for-the-badge)](https://ci-apps.yunohost.org/ci/apps/nidimages/)
+[![Version: 1.0~ynh1](https://img.shields.io/badge/Version-1.0~ynh1-rgb(18,138,11)?style=for-the-badge)](https://ci-apps.yunohost.org/ci/apps/jauto-expose/)
 
 <div align="center">
-<a href="https://apps.yunohost.org/app/nidimages"><img height="100px" src="https://github.com/YunoHost/yunohost-artwork/raw/refs/heads/main/badges/neopossum-badges/badge_more_info_on_the_appstore.svg"/></a>
-<a href="https://github.com/YunoHost-Apps/nidimages_ynh/issues"><img height="100px" src="https://github.com/YunoHost/yunohost-artwork/raw/refs/heads/main/badges/neopossum-badges/badge_report_an_issue.svg"/></a>
+<a href="https://apps.yunohost.org/app/jauto-expose"><img height="100px" src="https://github.com/YunoHost/yunohost-artwork/raw/refs/heads/main/badges/neopossum-badges/badge_more_info_on_the_appstore.svg"/></a>
+<a href="https://github.com/YunoHost-Apps/jauto-expose_ynh/issues"><img height="100px" src="https://github.com/YunoHost/yunohost-artwork/raw/refs/heads/main/badges/neopossum-badges/badge_report_an_issue.svg"/></a>
 </div>
-
-
-## Screenshots
-![Screenshot of Nidimages](./doc/screenshots/screenshot.png)
 
 ## 📦 Developer info
 
-[![Automatic tests level](https://apps.yunohost.org/badge/cilevel/nidimages)](https://ci-apps.yunohost.org/ci/apps/nidimages/)
+[![Automatic tests level](https://apps.yunohost.org/badge/cilevel/jauto-expose)](https://ci-apps.yunohost.org/ci/apps/jauto-expose/)
 
-🛠️ Upstream Nidimages repository: <https://git.sitegui.dev/sitegui/nidimages>
+🛠️ Upstream J'auto expose repository: <https://git.sitegui.dev/sitegui/jauto-expose>
 
-Pull request are welcome and should target the [`testing` branch](https://github.com/YunoHost-Apps/nidimages_ynh/tree/testing).
+Pull request are welcome and should target the [`testing` branch](https://github.com/YunoHost-Apps/jauto-expose_ynh/tree/testing).
 
 The `testing` branch can be tested using:
 ```
 # fresh install:
-sudo yunohost app install https://github.com/YunoHost-Apps/nidimages_ynh/tree/testing
+sudo yunohost app install https://github.com/YunoHost-Apps/jauto-expose_ynh/tree/testing
 
 # upgrade an existing install:
-sudo yunohost app upgrade nidimages -u https://github.com/YunoHost-Apps/nidimages_ynh/tree/testing
+sudo yunohost app upgrade jauto-expose -u https://github.com/YunoHost-Apps/jauto-expose_ynh/tree/testing
 ```
 
 ### 📚 App packaging documentation
