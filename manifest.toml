@@ -1,0 +1,91 @@
+#:schema https://raw.githubusercontent.com/YunoHost/apps/main/schemas/manifest.v2.schema.json
+
+packaging_format = 2
+id = "jauto-expose"
+name = "J'auto expose"
+description.en = "A tool for open your Yunohost to the Internet, using a remote cloud machine as a passage"
+description.fr = "Un outil pour ouvrir ton Yunohost à l'Internet, en passant par une machine à distance sur le cloud"
+
+version = "1.0~ynh1"
+
+maintainers = ["sitegui"]
+
+[upstream]
+license = "AGPL-3.0-only"
+code = "https://git.sitegui.dev/sitegui/jauto-expose"
+
+[integration]
+yunohost = ">= 12.1.40"
+helpers_version = "2.1"
+architectures = ["amd64", "arm64"]
+multi_instance = false
+
+ldap = "not_relevant"
+sso = "not_relevant"
+
+disk = "10M"
+ram.build = "10M"
+ram.runtime = "5M"
+
+[install]
+    [install.cloud_addresses]
+    ask.en = "IP address of the cloud machine"
+    ask.fr = "Adresse IP de la machine cloud"
+    help.en = "You get this information when you configure the cloud machine with the setup instructions described above."
+    help.fr = "Tu récupères cette information en configurant la machine cloud comme décrit ci-dessus."
+    type = "string"
+
+    [install.link_token]
+    ask.en = "Configuration secret token"
+    ask.fr = "Clé de configuration secrète"
+    help.en = "You get this information when you configure the cloud machine with the setup instructions described above."
+    help.fr = "Tu récupères cette information en configurant la machine cloud comme décrit ci-dessus."
+    type = "string"
+    redact = true
+
+    [install.expose_http]
+    ask.en = "Expose Web ports (80 and 443)"
+    ask.fr = "Exposes les ports Web (80 et 443)"
+    help.en = "This allows Internet users to see your hosted Yunohost apps."
+    help.fr = "Ceci permet à des utilisateurs Internet de voir tes applications Yunohost."
+    type = "boolean"
+    default = 1
+
+    [install.expose_ssh]
+    ask.en = "Expose SSH port (22)"
+    ask.fr = "Exposes SSH port (22)"
+    help.en = "This allows Internet users to see your SSH server."
+    help.fr = "Ceci permet à des utilisateurs Internet de voir ton seveur SSH."
+    type = "boolean"
+    default = 0
+
+    [install.expose_email]
+    ask.en = "Expose email ports (25, 587 and 994)"
+    ask.fr = "Exposes les ports mail (25, 587 et 994)"
+    help.en = "This allows Internet users to see your email server."
+    help.fr = "Ceci permet à des utilisateurs Internet de voir ton seveur mail."
+    type = "boolean"
+    default = 0
+
+    [install.more_ports]
+    ask.en = "A comma-separated list of other TCP ports to expose"
+    ask.fr = "Une liste separé par virgule d'autres ports TCP à exposer"
+    help.en = "Leaving this empty is probably what you need."
+    help.fr = "Tu peux laisser ce champ vide, c'est probablement ce qu'il te faut."
+    type = "string"
+    optional = true
+
+[resources]
+    [resources.sources]
+
+    [resources.sources.main]
+    arm64.url = "https://git.sitegui.dev/sitegui/jauto-expose/releases/download/v0.1.5/jauto-expose-aarch64-unknown-linux-musl"
+    arm64.sha256 = "a8ca4b5aa2d9d187be1438513350c5479025c7998e45c746e08e41869a20bb45"
+    amd64.url = "https://git.sitegui.dev/sitegui/jauto-expose/releases/download/v0.1.5/jauto-expose-x86_64-unknown-linux-musl"
+    amd64.sha256 = "16c2e36c15213a5823939ca82fc978450d8e75bd6de00dcc97e367b7e1b318d4"
+    format = "executable"
+    autoupdate.strategy = "latest_forgejo_release"
+    autoupdate.asset.arm64 = "jauto-expose-aarch64-unknown-linux-musl\\.zip"
+    autoupdate.asset.amd64 = "jauto-expose-x86_64-unknown-linux-musl\\.zip"
+
+    [resources.install_dir]
