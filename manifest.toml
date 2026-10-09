@@ -45,55 +45,25 @@ ram.runtime = "5M"
     redact = true
     pattern.regexp = "^[0-9a-f]+$"
 
-    [install.expose_web]
-    ask.en = "Expose Web ports (80 and 443)"
-    ask.fr = "Exposer les ports Web (80 et 443)"
-    help.en = "This allows Internet users to see your hosted Yunohost apps"
-    help.fr = "Ceci permet aux utilisateurs Internet de voir tes applications Yunohost"
-    type = "boolean"
-    default = 1
-    yes = "true"
-    no = "false"
-
-    [install.expose_ssh]
-    ask.en = "Expose SSH port (22)"
-    ask.fr = "Exposer le port SSH (22)"
-    help.en = "This allows Internet users to see your SSH server"
-    help.fr = "Ceci permet aux utilisateurs Internet de voir ton seveur SSH"
-    type = "boolean"
-    default = 0
-    yes = "true"
-    no = "false"
-
-    [install.expose_email]
-    ask.en = "Expose email ports (25, 587 and 994)"
-    ask.fr = "Exposer les ports mail (25, 587 et 994)"
-    help.en = "This allows Internet users to see your email server"
-    help.fr = "Ceci permet aux utilisateurs Internet de voir ton seveur mail"
-    type = "boolean"
-    default = 0
-    yes = "true"
-    no = "false"
-
-    [install.more_ports]
-    ask.en = "A comma-separated list of other TCP ports to expose"
-    ask.fr = "Une liste separé par virgule d'autres ports TCP à exposer"
-    help.en = "Leaving this empty is probably what you need"
-    help.fr = "Tu peux laisser ce champ vide, c'est probablement ce qu'il te faut"
+    [install.link_ports]
+    ask.en = "A comma-separated list of TCP ports to expose"
+    ask.fr = "Une liste separé par virgule des ports TCP à exposer"
+    help.en = "The default value is probably what you need, as it opens access to Web services. If you also want to expose email and SSH servers use 80,443,2222->22,25,587,993"
+    help.fr = "La valeur par défault est probablement ce qu'il te faut, rendant ouvert les services Web. Si tu veux aussi exposer les serveurs mail et SSH, mets 80,443,2222->22,25,587,993"
     type = "string"
-    optional = true
-    pattern.regexp = "^[0-9,]+$"
+    default = "80,443"
+    pattern.regexp = "^[0-9>,-]+$"
 
 [resources]
     [resources.sources]
 
     [resources.sources.main]
-    amd64.url = "https://git.sitegui.dev/sitegui/jauto-expose/releases/download/v0.1.8/jauto-expose-amd64"
-    amd64.sha256 = "9830873f1e292918a96944e7a0e911f1e098da1ef32eb4c9633f5655dc4a9aba"
-    arm64.url = "https://git.sitegui.dev/sitegui/jauto-expose/releases/download/v0.1.8/jauto-expose-arm64"
-    arm64.sha256 = "2d9720ef11fab7fbedbd1bb5caf3889834365026c623a81420968f94ad437afe"
-    armhf.url = "https://git.sitegui.dev/sitegui/jauto-expose/releases/download/v0.1.8/jauto-expose-armhf"
-    armhf.sha256 = "cf19f55c4f181303dee7ffd501a0686e825fe800edd0263d37936b0f91085a7d"
+    amd64.url = "https://git.sitegui.dev/sitegui/jauto-expose/releases/download/v0.1.9/jauto-expose-amd64"
+    amd64.sha256 = "bb5679394e266157553b6b6f1ce666e8dac5db398f993f7cdfee947a2faad2c9"
+    arm64.url = "https://git.sitegui.dev/sitegui/jauto-expose/releases/download/v0.1.9/jauto-expose-arm64"
+    arm64.sha256 = "ae2db9d2dd767f68dc6babd6bef39a9b7e0681cc0952e3f01ad0ee8ab0d3b011"
+    armhf.url = "https://git.sitegui.dev/sitegui/jauto-expose/releases/download/v0.1.9/jauto-expose-armhf"
+    armhf.sha256 = "baeb7c2b329394ab1dc395a809830777c40092bd164b6904b5f2926d8b17d4f0"
     format = "executable"
     extract = false
     rename = "jauto-expose"

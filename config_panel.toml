@@ -1,0 +1,34 @@
+version = "1.0"
+[main]
+services = ["__APP__"]
+
+[main.main]
+
+[main.main.cloud_addresses]
+ask.en = "IP address of the cloud machine"
+ask.fr = "Adresse IP de la machine cloud"
+help.en = "You get this information when you configure the cloud machine with the setup instructions described above"
+help.fr = "Tu récupères cette information en configurant la machine cloud comme décrit ci-dessus"
+type = "string"
+pattern.regexp = "^[0-9a-f:.,]+$"
+bind = "addresses:__INSTALL_DIR__/home.toml"
+
+[main.main.link_token]
+ask.en = "Configuration secret token"
+ask.fr = "Clé de configuration secrète"
+help.en = "You get this information when you configure the cloud machine with the setup instructions described above"
+help.fr = "Tu récupères cette information en configurant la machine cloud comme décrit ci-dessus"
+type = "string"
+redact = true
+pattern.regexp = "^[0-9a-f]+$"
+bind = "token:__INSTALL_DIR__/home.toml"
+
+[main.main.link_ports]
+ask.en = "A comma-separated list of TCP ports to expose"
+ask.fr = "Une liste separé par virgule des ports TCP à exposer"
+help.en = "The default value is probably what you need, as it opens access to Web services. If you also want to expose email and SSH servers use 80,443,2222->22,25,587,993"
+help.fr = "La valeur par défault est probablement ce qu'il te faut, rendant ouvert les services Web. Si tu veux aussi exposer les serveurs mail et SSH, mets 80,443,2222->22,25,587,993"
+type = "string"
+default = "80,443"
+pattern.regexp = "^[0-9>,-]+$"
+bind = "ports:__INSTALL_DIR__/home.toml"
