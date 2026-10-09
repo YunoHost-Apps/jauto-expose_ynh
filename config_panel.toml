@@ -19,7 +19,6 @@ ask.fr = "Clé de configuration secrète"
 help.en = "You get this information when you configure the cloud machine with the setup instructions described above"
 help.fr = "Tu récupères cette information en configurant la machine cloud comme décrit ci-dessus"
 type = "string"
-redact = true
 pattern.regexp = "^[0-9a-f]+$"
 bind = "token:__INSTALL_DIR__/home.toml"
 
