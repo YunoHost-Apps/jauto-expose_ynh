@@ -1,0 +1,23 @@
+version = "1.0"
+[main]
+
+[main.main]
+[main.main.addresses]
+ask.en = "IP address of the cloud machine"
+ask.fr = "Adresse IP de la machine cloud"
+help.en = "You get this information when you configure the cloud machine with the setup instructions described above"
+help.fr = "Tu récupères cette information en configurant la machine cloud comme décrit ci-dessus"
+bind = ":__INSTALL_DIR__/home.toml"
+
+[main.main.token]
+ask.en = "Configuration secret token"
+ask.fr = "Clé de configuration secrète"
+help.en = "You get this information when you configure the cloud machine with the setup instructions described above"
+help.fr = "Tu récupères cette information en configurant la machine cloud comme décrit ci-dessus"
+redact = true
+bind = ":__INSTALL_DIR__/home.toml"
+
+[main.main.ports]
+ask.en = "A comma-separated list of other TCP ports to expose"
+ask.fr = "Une liste separé par virgule d'autres ports TCP à exposer"
+bind = ":__INSTALL_DIR__/home.toml"
