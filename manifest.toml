@@ -79,10 +79,12 @@ ram.runtime = "5M"
     [resources.sources]
 
     [resources.sources.main]
-    arm64.url = "https://git.sitegui.dev/sitegui/jauto-expose/releases/download/v0.1.5/jauto-expose-aarch64-unknown-linux-musl"
-    arm64.sha256 = "a8ca4b5aa2d9d187be1438513350c5479025c7998e45c746e08e41869a20bb45"
-    amd64.url = "https://git.sitegui.dev/sitegui/jauto-expose/releases/download/v0.1.5/jauto-expose-x86_64-unknown-linux-musl"
-    amd64.sha256 = "16c2e36c15213a5823939ca82fc978450d8e75bd6de00dcc97e367b7e1b318d4"
+    amd64.url = "https://git.sitegui.dev/sitegui/jauto-expose/releases/download/v0.1.5/jauto-expose-amd64"
+    amd64.sha256 = "39e00561109dba41be04cac391480d8258adb2a4696c73d32a8583aa57291d43"
+    arm64.url = "https://git.sitegui.dev/sitegui/jauto-expose/releases/download/v0.1.5/jauto-expose-arm64"
+    arm64.sha256 = "4c9426720ffab8d7a7842ba97e91a71c4bc4fe4f9b5c2727443269c99b719644"
+    armhf.url = "https://git.sitegui.dev/sitegui/jauto-expose/releases/download/v0.1.5/jauto-expose-armhf"
+    armhf.sha256 = "9d5953e4de2125fae7cae2e224de7d6f915510ac6bb18403bc90c624a9f6a1c6"
     format = "executable"
     autoupdate.strategy = "latest_forgejo_release"
     autoupdate.asset.arm64 = "jauto-expose-aarch64-unknown-linux-musl\\.zip"
