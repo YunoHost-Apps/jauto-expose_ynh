@@ -90,4 +90,6 @@ ram.runtime = "5M"
     autoupdate.asset.arm64 = "jauto-expose-aarch64-unknown-linux-musl\\.zip"
     autoupdate.asset.amd64 = "jauto-expose-x86_64-unknown-linux-musl\\.zip"
 
+    [resources.system_user]
+
     [resources.install_dir]
