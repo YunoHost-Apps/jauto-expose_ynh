@@ -21,7 +21,7 @@ chmod +x "$install_dir/jauto-expose"
 #=================================================
 ynh_script_progression "Adding $app's configuration files..."
 
-ynh_config_add --jinja --template="home.toml.j2" --destination="$install_dir/home.toml"
+ynh_config_add --template="home.toml" --destination="$install_dir/home.toml"
 
 #=================================================
 # SYSTEM CONFIGURATION

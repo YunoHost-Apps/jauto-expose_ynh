@@ -1,0 +1,7 @@
+addresses_str = "__CLOUD_ADDRESSES__"
+control_port = 10462
+token = "__LINK_TOKEN__"
+web_ports = __EXPOSE_WEB__
+ssh_port = __EXPOSE_SSH__
+email_ports = __EXPOSE_EMAIL__
+more_ports_str = "__MORE_PORTS__"
