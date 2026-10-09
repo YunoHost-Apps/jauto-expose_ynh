@@ -15,7 +15,7 @@ token = {{ link_token | to_yaml }}
     {% do all_ports.append(994) %}
 {% endif %}
 {% if more_ports %}
-    {% do more_ports_list = more_ports.split(',') %}
+    {% set more_ports_list = more_ports.split(',') %}
     {% for more_port in more_ports_list %}
         {% do all_ports.append(int(more_port)) %}
     {% endfor %}
