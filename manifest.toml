@@ -31,47 +31,47 @@ ram.runtime = "5M"
     [install.cloud_addresses]
     ask.en = "IP address of the cloud machine"
     ask.fr = "Adresse IP de la machine cloud"
-    help.en = "You get this information when you configure the cloud machine with the setup instructions described above."
-    help.fr = "Tu récupères cette information en configurant la machine cloud comme décrit ci-dessus."
+    help.en = "You get this information when you configure the cloud machine with the setup instructions described above"
+    help.fr = "Tu récupères cette information en configurant la machine cloud comme décrit ci-dessus"
     type = "string"
 
     [install.link_token]
     ask.en = "Configuration secret token"
     ask.fr = "Clé de configuration secrète"
-    help.en = "You get this information when you configure the cloud machine with the setup instructions described above."
-    help.fr = "Tu récupères cette information en configurant la machine cloud comme décrit ci-dessus."
+    help.en = "You get this information when you configure the cloud machine with the setup instructions described above"
+    help.fr = "Tu récupères cette information en configurant la machine cloud comme décrit ci-dessus"
     type = "string"
     redact = true
 
     [install.expose_http]
     ask.en = "Expose Web ports (80 and 443)"
-    ask.fr = "Exposes les ports Web (80 et 443)"
-    help.en = "This allows Internet users to see your hosted Yunohost apps."
-    help.fr = "Ceci permet à des utilisateurs Internet de voir tes applications Yunohost."
+    ask.fr = "Exposer les ports Web (80 et 443)"
+    help.en = "This allows Internet users to see your hosted Yunohost apps"
+    help.fr = "Ceci permet aux utilisateurs Internet de voir tes applications Yunohost"
     type = "boolean"
     default = 1
 
     [install.expose_ssh]
     ask.en = "Expose SSH port (22)"
-    ask.fr = "Exposes SSH port (22)"
-    help.en = "This allows Internet users to see your SSH server."
-    help.fr = "Ceci permet à des utilisateurs Internet de voir ton seveur SSH."
+    ask.fr = "Exposer le port SSH (22)"
+    help.en = "This allows Internet users to see your SSH server"
+    help.fr = "Ceci permet aux utilisateurs Internet de voir ton seveur SSH"
     type = "boolean"
     default = 0
 
     [install.expose_email]
     ask.en = "Expose email ports (25, 587 and 994)"
-    ask.fr = "Exposes les ports mail (25, 587 et 994)"
-    help.en = "This allows Internet users to see your email server."
-    help.fr = "Ceci permet à des utilisateurs Internet de voir ton seveur mail."
+    ask.fr = "Exposer les ports mail (25, 587 et 994)"
+    help.en = "This allows Internet users to see your email server"
+    help.fr = "Ceci permet aux utilisateurs Internet de voir ton seveur mail"
     type = "boolean"
     default = 0
 
     [install.more_ports]
     ask.en = "A comma-separated list of other TCP ports to expose"
     ask.fr = "Une liste separé par virgule d'autres ports TCP à exposer"
-    help.en = "Leaving this empty is probably what you need."
-    help.fr = "Tu peux laisser ce champ vide, c'est probablement ce qu'il te faut."
+    help.en = "Leaving this empty is probably what you need"
+    help.fr = "Tu peux laisser ce champ vide, c'est probablement ce qu'il te faut"
     type = "string"
     optional = true
 
@@ -79,11 +79,11 @@ ram.runtime = "5M"
     [resources.sources]
 
     [resources.sources.main]
-    amd64.url = "https://git.sitegui.dev/sitegui/jauto-expose/releases/download/v0.1.5/jauto-expose-amd64"
+    amd64.url = "https://git.sitegui.dev/sitegui/jauto-expose/releases/download/v0.1.6/jauto-expose-amd64"
     amd64.sha256 = "39e00561109dba41be04cac391480d8258adb2a4696c73d32a8583aa57291d43"
-    arm64.url = "https://git.sitegui.dev/sitegui/jauto-expose/releases/download/v0.1.5/jauto-expose-arm64"
+    arm64.url = "https://git.sitegui.dev/sitegui/jauto-expose/releases/download/v0.1.6/jauto-expose-arm64"
     arm64.sha256 = "4c9426720ffab8d7a7842ba97e91a71c4bc4fe4f9b5c2727443269c99b719644"
-    armhf.url = "https://git.sitegui.dev/sitegui/jauto-expose/releases/download/v0.1.5/jauto-expose-armhf"
+    armhf.url = "https://git.sitegui.dev/sitegui/jauto-expose/releases/download/v0.1.6/jauto-expose-armhf"
     armhf.sha256 = "9d5953e4de2125fae7cae2e224de7d6f915510ac6bb18403bc90c624a9f6a1c6"
     format = "executable"
     autoupdate.strategy = "latest_forgejo_release"
