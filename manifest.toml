@@ -6,7 +6,7 @@ name = "J'auto expose"
 description.en = "A tool for opening your Yunohost to the Internet, using a remote cloud machine as a passage"
 description.fr = "Un outil pour ouvrir ton Yunohost à l'Internet, en passant par une machine à distance sur le cloud"
 
-version = "1.0~ynh2"
+version = "1.0~ynh1"
 
 maintainers = ["sitegui"]
 
@@ -28,49 +28,50 @@ ram.build = "10M"
 ram.runtime = "5M"
 
 [install]
-    [install.cloud_addresses]
-    ask.en = "IP address of the cloud machine"
-    ask.fr = "Adresse IP de la machine cloud"
-    help.en = "You get this information when you configure the cloud machine with the setup instructions described above"
-    help.fr = "Tu récupères cette information en configurant la machine cloud comme décrit ci-dessus"
-    type = "string"
-    pattern.regexp = "^[0-9a-f:.,]+$"
+[install.cloud_addresses]
+ask.en = "IP address of the cloud machine"
+ask.fr = "Adresse IP de la machine cloud"
+help.en = "You get this information when you configure the cloud machine with the setup instructions described above"
+help.fr = "Tu récupères cette information en configurant la machine cloud comme décrit ci-dessus"
+type = "string"
+pattern.regexp = "^[0-9a-f:.,]+$"
 
-    [install.link_token]
-    ask.en = "Configuration secret token"
-    ask.fr = "Clé de configuration secrète"
-    help.en = "You get this information when you configure the cloud machine with the setup instructions described above"
-    help.fr = "Tu récupères cette information en configurant la machine cloud comme décrit ci-dessus"
-    type = "string"
-    redact = true
-    pattern.regexp = "^[0-9a-f]+$"
+[install.link_token]
+ask.en = "Configuration secret token"
+ask.fr = "Clé de configuration secrète"
+help.en = "You get this information when you configure the cloud machine with the setup instructions described above"
+help.fr = "Tu récupères cette information en configurant la machine cloud comme décrit ci-dessus"
+type = "string"
+redact = true
+pattern.regexp = "^[0-9a-f]+$"
 
-    [install.link_ports]
-    ask.en = "A comma-separated list of TCP ports to expose"
-    ask.fr = "Une liste separé par virgule des ports TCP à exposer"
-    help.en = "The default value is probably what you need, as it opens access to Web services. If you also want to expose email and SSH servers use 80,443,2222->22,25,587,993"
-    help.fr = "La valeur par défault est probablement ce qu'il te faut, rendant ouvert les services Web. Si tu veux aussi exposer les serveurs mail et SSH, mets 80,443,2222->22,25,587,993"
-    type = "string"
-    default = "80,443"
-    pattern.regexp = "^[0-9>,-]+$"
+[install.link_ports]
+ask.en = "A comma-separated list of TCP ports to expose"
+ask.fr = "Une liste separé par virgule des ports TCP à exposer"
+help.en = "The default value is probably what you need, as it opens access to Web services. If you also want to expose email and SSH servers use 80,443,2222->22,25,587,993"
+help.fr = "La valeur par défault est probablement ce qu'il te faut, rendant ouvert les services Web. Si tu veux aussi exposer les serveurs mail et SSH, mets 80,443,2222->22,25,587,993"
+type = "string"
+default = "80,443"
+pattern.regexp = "^[0-9>,-]+$"
 
 [resources]
-    [resources.sources]
+[resources.sources]
 
-    [resources.sources.main]
-    amd64.url = "https://git.sitegui.dev/sitegui/jauto-expose/releases/download/v0.1.9/jauto-expose-amd64"
-    amd64.sha256 = "bb5679394e266157553b6b6f1ce666e8dac5db398f993f7cdfee947a2faad2c9"
-    arm64.url = "https://git.sitegui.dev/sitegui/jauto-expose/releases/download/v0.1.9/jauto-expose-arm64"
-    arm64.sha256 = "ae2db9d2dd767f68dc6babd6bef39a9b7e0681cc0952e3f01ad0ee8ab0d3b011"
-    armhf.url = "https://git.sitegui.dev/sitegui/jauto-expose/releases/download/v0.1.9/jauto-expose-armhf"
-    armhf.sha256 = "baeb7c2b329394ab1dc395a809830777c40092bd164b6904b5f2926d8b17d4f0"
-    format = "executable"
-    extract = false
-    rename = "jauto-expose"
-    autoupdate.strategy = "latest_forgejo_release"
-    autoupdate.asset.arm64 = "jauto-expose-aarch64-unknown-linux-musl\\.zip"
-    autoupdate.asset.amd64 = "jauto-expose-x86_64-unknown-linux-musl\\.zip"
+[resources.sources.main]
+amd64.url = "https://git.sitegui.dev/sitegui/jauto-expose/releases/download/v1.0.0/jauto-expose-amd64"
+amd64.sha256 = "363d875bc42db79da5b674433d89fd783d1096168b6740eb25a40340a31ab29d"
+arm64.url = "https://git.sitegui.dev/sitegui/jauto-expose/releases/download/v1.0.0/jauto-expose-arm64"
+arm64.sha256 = "e9e956b17fab87d1aa0395a910d38142f6f491eda4a57fc847bcc64b1b8b9536"
+armhf.url = "https://git.sitegui.dev/sitegui/jauto-expose/releases/download/v1.0.0/jauto-expose-armhf"
+armhf.sha256 = "b4aae528faf8ee786aa824d513a743fb4f924c17e22e2cdaf2a22f48c80d9b73"
+format = "executable"
+extract = false
+rename = "jauto-expose"
+autoupdate.strategy = "latest_forgejo_release"
+autoupdate.asset.amd64 = "jauto-expose-amd64"
+autoupdate.asset.arm64 = "jauto-expose-arm64"
+autoupdate.asset.armhf = "jauto-expose-armhf"
 
-    [resources.system_user]
+[resources.system_user]
 
-    [resources.install_dir]
+[resources.install_dir]
