@@ -3,18 +3,21 @@ control_port = 10462
 token = {{ link_token | to_yaml }}
 {% set all_ports = [] %}
 {% if expose_http == 1 %}
-{% do all_ports.append(80) %}
-{% do all_ports.append(443) %}
+    {% do all_ports.append(80) %}
+    {% do all_ports.append(443) %}
 {% endif %}
 {% if expose_ssh == 1 %}
-{% do all_ports.append(22) %}
+    {% do all_ports.append(22) %}
 {% endif %}
 {% if expose_email == 1 %}
-{% do all_ports.append(25) %}
-{% do all_ports.append(587) %}
-{% do all_ports.append(994) %}
+    {% do all_ports.append(25) %}
+    {% do all_ports.append(587) %}
+    {% do all_ports.append(994) %}
 {% endif %}
-{% for more_port in more_ports | split(',') %}
-{% do all_ports.append(int(more_port)) %}
-{% endfor %}
+{% if more_ports %}
+    {% do more_ports_list = more_ports.split(',') %}
+    {% for more_port in more_ports_list %}
+        {% do all_ports.append(int(more_port)) %}
+    {% endfor %}
+{% endif %}
 ports = {{ all_ports | to_yaml }}
