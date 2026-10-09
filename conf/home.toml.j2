@@ -3,13 +3,18 @@ control_port = 10462
 token = {{ link_token | to_yaml }}
 {% set all_ports = [] %}
 {% if expose_http == 1 %}
-{{ all_ports += [80, 443] }}
+{% do all_ports.append(80) %}
+{% do all_ports.append(443) %}
 {% endif %}
 {% if expose_ssh == 1 %}
-{{ all_ports.append(22) }}
+{% do all_ports.append(22) %}
 {% endif %}
 {% if expose_email == 1 %}
-{{ all_ports += [25, 587, 994] }}
+{% do all_ports.append(25) %}
+{% do all_ports.append(587) %}
+{% do all_ports.append(994) %}
 {% endif %}
-{{ all_ports += map(int, more_ports.split(',')) }}
+{% for more_port in more_ports | split(',') %}
+{% do all_ports.append(int(more_port)) %}
+{% endfor %}
 ports = {{ all_ports | to_yaml }}
