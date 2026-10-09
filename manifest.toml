@@ -46,8 +46,8 @@ redact = true
 pattern.regexp = "^[0-9a-f]+$"
 
 [install.link_ports]
-ask.en = "A comma-separated list of TCP ports to expose"
-ask.fr = "Une liste separé par virgule des ports TCP à exposer"
+ask.en = "TCP ports to expose"
+ask.fr = "Ports TCP à exposer"
 help.en = "The default value is probably what you need, as it opens access to Web services. If you also want to expose email and SSH servers use 80,443,2222->22,25,587,993"
 help.fr = "La valeur par défault est probablement ce qu'il te faut, rendant ouvert les services Web. Si tu veux aussi exposer les serveurs mail et SSH, mets 80,443,2222->22,25,587,993"
 type = "string"

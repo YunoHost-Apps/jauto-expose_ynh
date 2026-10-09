@@ -10,7 +10,7 @@ services sur un Raspberry Pi connecté via le partage de connexion de ton télé
 
 ## Mode d’emploi
 
-Premièrement, tu dois installer jauto-expose sur une machine dans le cloud. Suis les
+Premièrement, tu dois installer jauto-expose sur une machine dans le cloud, comme décrit par les
 instructions [sur la page du projet](https://git.sitegui.dev/sitegui/jauto-expose/src/branch/main/README_fr.md).
 
 Puis, installe cette application avec l'adresse IP et le token secret obtenus dans l'étape précédente.
