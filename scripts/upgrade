@@ -21,6 +21,8 @@ ynh_script_progression "Upgrading source files..."
 
 ynh_setup_source --dest_dir="$install_dir" --full_replace --keep="home.toml"
 
+chmod +x "$install_dir/jauto-expose"
+
 #=================================================
 # UPDATE A CONFIG FILE
 #=================================================
@@ -35,7 +37,7 @@ ynh_script_progression "Upgrading system configurations related to $app..."
 
 ynh_config_add_systemd
 
-yunohost service add "$app" --description="A tool for open your Yunohost to the Internet" --log="/var/log/$app/$app.log"
+yunohost service add "$app" --description="A tool for opening your Yunohost to the Internet" --log="/var/log/$app/$app.log"
 
 ynh_config_add_logrotate
 

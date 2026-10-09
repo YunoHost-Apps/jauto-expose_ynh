@@ -1,6 +1,6 @@
-addresses = {{ cloud_addresses | to_yaml }}
+addresses = {{ cloud_addresses | to_toml }}
 control_port = 10462
-token = {{ link_token | to_yaml }}
+token = {{ link_token | to_toml }}
 {% set all_ports = [] %}
 {% if expose_http == 1 %}
     {% do all_ports.append(80) %}
@@ -20,4 +20,4 @@ token = {{ link_token | to_yaml }}
         {% do all_ports.append(int(more_port)) %}
     {% endfor %}
 {% endif %}
-ports = {{ all_ports | to_yaml }}
+ports = {{ all_ports | to_toml }}

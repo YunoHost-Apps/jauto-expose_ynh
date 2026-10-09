@@ -1,5 +1,5 @@
 [Unit]
-Description=A tool for open your Yunohost to the Internet
+Description=A tool for opening your Yunohost to the Internet
 After=network.target
 
 [Service]

@@ -14,6 +14,8 @@ ynh_script_progression "Setting up source files..."
 
 ynh_setup_source --dest_dir="$install_dir"
 
+chmod +x "$install_dir/jauto-expose"
+
 #=================================================
 # APP INITIAL CONFIGURATION
 #=================================================
@@ -28,7 +30,7 @@ ynh_script_progression "Adding system configurations related to $app..."
 
 ynh_config_add_systemd
 
-yunohost service add "$app" --description="A tool for open your Yunohost to the Internet" --log="/var/log/$app/$app.log"
+yunohost service add "$app" --description="A tool for opening your Yunohost to the Internet" --log="/var/log/$app/$app.log"
 
 ynh_config_add_logrotate
 
