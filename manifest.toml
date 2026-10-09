@@ -34,7 +34,7 @@ ram.runtime = "5M"
     help.en = "You get this information when you configure the cloud machine with the setup instructions described above"
     help.fr = "Tu récupères cette information en configurant la machine cloud comme décrit ci-dessus"
     type = "string"
-    pattern.regexp = "^[0-9:.,]+$"
+    pattern.regexp = "^[0-9a-f:.,]+$"
 
     [install.link_token]
     ask.en = "Configuration secret token"
