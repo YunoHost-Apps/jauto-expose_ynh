@@ -2,14 +2,14 @@ addresses = {{ cloud_addresses | to_json }}
 control_port = 10462
 token = {{ link_token | to_json }}
 {%- set all_ports = [] %}
-{%- if expose_http == 1 %}
+{%- if expose_http == "1" %}
     {%- do all_ports.append(80) %}
     {%- do all_ports.append(443) %}
 {%- endif %}
-{%- if expose_ssh == 1 %}
+{%- if expose_ssh == "1" %}
     {%- do all_ports.append(22) %}
 {%- endif %}
-{%- if expose_email == 1 %}
+{%- if expose_email == "1" %}
     {%- do all_ports.append(25) %}
     {%- do all_ports.append(587) %}
     {%- do all_ports.append(994) %}
