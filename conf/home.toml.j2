@@ -17,7 +17,7 @@ token = {{ link_token | to_json }}
 {% if more_ports %}
     {% set more_ports_list = more_ports.split(',') %}
     {% for more_port in more_ports_list %}
-        {% do all_ports.append(int(more_port)) %}
+        {% do all_ports.append((more_port | int)) %}
     {% endfor %}
 {% endif %}
 ports = {{ all_ports | to_json }}
