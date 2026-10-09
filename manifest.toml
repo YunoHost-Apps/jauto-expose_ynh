@@ -3,8 +3,8 @@
 packaging_format = 2
 id = "jauto-expose"
 name = "J'auto expose"
-description.en = "A tool for opening your Yunohost to the Internet, using a remote cloud machine as a passage"
-description.fr = "Un outil pour ouvrir ton Yunohost à l'Internet, en passant par une machine à distance sur le cloud"
+description.en = "Tool for opening your YunoHost to the Internet, using a remote cloud machine as a passage"
+description.fr = "Outil pour ouvrir ton YunoHost à l'Internet, en passant par une machine à distance sur le cloud"
 
 version = "1.0~ynh1"
 
