@@ -6,7 +6,7 @@ name = "J'auto expose"
 description.en = "Tool for opening your YunoHost to the Internet, using a remote cloud machine as a passage"
 description.fr = "Outil pour ouvrir ton YunoHost à l'Internet, en passant par une machine à distance sur le cloud"
 
-version = "1.0~ynh1"
+version = "1.0.1~ynh1"
 
 maintainers = ["sitegui"]
 
@@ -57,12 +57,12 @@ pattern.regexp = "^[0-9>,-]+$"
 [resources.sources]
 
 [resources.sources.main]
-amd64.url = "https://git.sitegui.dev/sitegui/jauto-expose/releases/download/v1.0.0/jauto-expose-amd64"
-amd64.sha256 = "363d875bc42db79da5b674433d89fd783d1096168b6740eb25a40340a31ab29d"
-arm64.url = "https://git.sitegui.dev/sitegui/jauto-expose/releases/download/v1.0.0/jauto-expose-arm64"
-arm64.sha256 = "e9e956b17fab87d1aa0395a910d38142f6f491eda4a57fc847bcc64b1b8b9536"
-armhf.url = "https://git.sitegui.dev/sitegui/jauto-expose/releases/download/v1.0.0/jauto-expose-armhf"
-armhf.sha256 = "b4aae528faf8ee786aa824d513a743fb4f924c17e22e2cdaf2a22f48c80d9b73"
+amd64.url = "https://git.sitegui.dev/sitegui/jauto-expose/releases/download/v1.0.1/jauto-expose-amd64"
+amd64.sha256 = "e683b0e9f6ac73c5fcd9fdcac054cff7b5cf0cd38258f7d4b12b3910bbf92c32"
+arm64.url = "https://git.sitegui.dev/sitegui/jauto-expose/releases/download/v1.0.1/jauto-expose-arm64"
+arm64.sha256 = "ce7b45780173b9e2ca522e531f6bfeeb1f49dfef4361fc1758ffc3b53a8c48b5"
+armhf.url = "https://git.sitegui.dev/sitegui/jauto-expose/releases/download/v1.0.1/jauto-expose-armhf"
+armhf.sha256 = "0a2aeeb7a185298711e5453eddf23978175826f5c0c3ad825bc8412f6d6b6cfc"
 format = "whatever"
 extract = false
 rename = "jauto-expose"
